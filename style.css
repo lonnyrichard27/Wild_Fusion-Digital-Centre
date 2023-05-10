@@ -1,0 +1,289 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+/* styling for the whole browser page */
+
+/*  omit this, lets call the colors our selves */
+:root{
+  --main-color: #ff702a;
+  --text-color: #fff;
+  --bg-color: #1e1c2a;
+  --big-font: 5rem;
+  --h2-font: 2.25rem;
+  --p-font: 0.9rem; 
+}
+
+body{
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* header styles */
+header{
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 170px;
+  background-color: var(--bg-color);
+}
+
+.logo{
+  color: var(--main-color);
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+
+.navbar{
+  display: flex;
+}
+
+.navbar a{
+  color: var(--text-color);
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+.navbar a:hover{
+  color: var(--main-color);
+  /* might ommit */
+  transition: .4s;
+}
+
+#menu-icon{
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* header styles end */
+section{
+  padding: 13rem 14%;
+}
+.home{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+.home-img img{
+  width: 500px;
+}
+.home-text h1{
+  font-size: var(--big-font);
+  color: var(--main-color);
+}
+.home-text h2{
+  font-size: var(--h2-font);
+  margin: 1rem 0 2rem;
+}
+.btn{
+  /* display: inline-block; */
+  padding: 10px 20px;
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 0.5rem;
+}
+/* hero section ends */
+
+/* about */
+.about{
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.about-img img{
+  width: 500px;
+}
+
+.about-text span{
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.about-text h2{
+  font-size: var(--h2-font);
+}
+
+.about-text p{
+  margin: 0.8rem 1.8rem;
+  line-height: 1.7;
+}
+
+/* menu section */
+.heading{
+  text-align: center;
+}
+.heading span{
+  color: var(--main-color);
+  font-weight: 600;
+}
+.heading h2{
+  font-size: var(--h2-font);
+}
+.menu-container{
+  display: grid;
+  /* explaining grid basically, but we dont want to use percentages because if can give an overflow, now lets use 1fr */
+  grid-template-columns: 30% 30% 30%;
+  gap: 2rem;
+  align-items: center;
+}
+.box{
+  position: relative;
+  margin-top: 4rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #feeee7;
+  padding: 20px;
+  border-radius: 0.5rem;
+}
+
+.box-img{
+  width: 220px;
+  height: 220px;
+}
+
+.box-img{
+  width: 100%;
+  height: 100%;
+}
+
+.box h2{
+  font-size: 1.3rem;
+  color: var(--bg-color);
+}
+
+.box h3{
+  color: var(--bg-color);
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 4px 0 10px;
+}
+
+.box span{
+  font-size: var(--p-font);
+  color: var(--main-color);
+  font-weight: 600;
+}
+.box.bx{
+  background-color: var(--main-color);
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 20px;
+  padding: 7px 10px;
+  border-radius: 0 0.5rem 0 0.5rem;
+}
+
+/* our services */
+.service-container{
+  display: grid;
+  /* the code below is a shortcut saying repeat this 3 times */
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* one of the major differences between grid and flex is that display:flex automatically put each box beside each other while display:grid allows you to control the sizes of each container either in width or height */
+
+  /* theres also grid-auto-flow: column/row which automatically sets the column, now try adding multiple containers, it automatically fits it in, make this visual */
+  /* or  */
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.service-box{
+  text-align: center;
+  padding: 20px 30px;
+}
+.service-box img{
+  width: 90px;
+}
+.service-box h3{
+  margin: 4px 0 10px;
+  color: var(--main-color);
+  font-size: 1.2rem;
+}
+.service-box p{
+  line-height: 1.7;
+}
+
+/* cta */
+.cta{
+  background-color: #feeee7;
+  padding: 70px 0;
+  text-align: center;
+  width: 66%;
+  margin: 100px auto;
+  border-radius: 10px;
+}
+.cta h2{
+  font-size: 2rem;
+  color: var(--bg-color);
+  margin-bottom: 30px;
+}
+
+/* footer */
+.main{
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer{
+  padding: 10px 0;
+}
+.col{
+  width: 25%;
+}
+.col h4{
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 25px;
+  position: relative;
+}
+
+/* might omit */
+.col h4::before{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 50px;
+  left: 0;
+  bottom: -8px;
+  background: var(--main-color);
+}
+.col ul li a{
+  color: #9897a9;
+  font-size: 1.1rem;
+  display: block;
+  margin: 20px 0px;
+  text-transform: capitalize;
+  transition: .4s;
+}
+.col .social{
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.col .social a{
+  height: 40px;
+  width: 40px;
+  background: var(--main-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+}
